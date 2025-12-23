@@ -79,8 +79,7 @@ docs/_build/
 .pybuilder/
 target/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+.tasks.json
 
 # IPython
 profile_default/
