@@ -6,6 +6,8 @@ import datetime
 STATUS_LIST = ["todo","in-progress","done"]
 DB_FILE = "tasks.json"
 
+#TODO: fix id logic, use argprse, handle errors (try/catch), validate sys.argv arguments, 
+
 def write_json(data):    
     with open(DB_FILE,'w') as json_file:
         return json.dump(data, json_file, indent=4)
