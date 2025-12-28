@@ -4,15 +4,16 @@
 
 ## 📖 Overview
 
-`task-cli` is a lightweight, intuitive command-line utility designed to help you stay organized and productive. It provides a straightforward way to add, list, complete, and delete your tasks directly from your terminal, storing them locally for persistence. Perfect for developers, system administrators, or anyone who prefers a minimalist approach to task management.
+`task-cli` is a lightweight command-line utility designed to help you stay organized and productive. It provides a straightforward way to add, list, complete, and delete your tasks directly from your terminal, storing them locally for persistence. Perfect for developers, system administrators, or anyone who prefers a minimalist approach to task management.
 
 ## ✨ Features
 
 -   **Add New Tasks**: Quickly add tasks with descriptive text.
+-   **Update Tasks**: Update a task description using its ID.
 -   **List All Tasks**: View your pending and completed tasks.
--   **Mark Tasks Complete**: Easily mark tasks as finished by their ID.
+-   **List Tasks by Status**: Filter tasks by status.
+-   **Mark Tasks Complete/In-Progres/Done**: Easily mark tasks as by their ID.
 -   **Delete Specific Tasks**: Remove individual tasks that are no longer needed.
--   **Clear All Tasks**: Reset your task list by removing all entries.
 -   **Local Persistence**: Your tasks are saved locally and persist across sessions.
 
 ## 🚀 Quick Start
@@ -38,56 +39,53 @@
 
 ### Usage
 
-You can run the script directly or create an alias for easier access.
+You can run the script directly.
 
 #### Run Directly
 
 ```bash
-./tracker.py help
+python tracker.py help
 ```
 ### Basic Commands
 
 ```bash
 # Display help information
-task help
+python tracker.py -h
 ```
 
 ### Available Commands
 
 | Command | Description | Example Usage |
 |---------|-------------|---------------|
-| `add <description>` | Adds a new task. | `task add "Buy groceries"` |
-| `list` / `ls` | Lists all tasks (pending and completed). | `task list` |
-| `done <id>` | Marks a task as complete using its ID. | `task done 1` |
-| `delete <id>` | Deletes a task by its ID. | `task delete 2` |
-| `clear` | Clears all tasks from the list. | `task clear` |
-| `report` | Displays a summary of pending vs. completed tasks. | `task report` |
-| `help` | Shows the help message for the CLI tool. | `task help` |
+| `add <description>` | Adds a new task. | `python tracker.py add "Buy groceries"` |
+| `update <id> <new_description>` | Update task description | `python tracker.py update 1 "Refactor JSON storage" |
+| `list` | Lists all tasks (todo, in-progress and done). | `python tracker.py list` |
+| `list <status>` | Lists tasks by status | `python tracker.py list in-progress |
+| `mark <status> <id>` | Change a task status using its ID. | `python tracker.py mark done 1` |
+| `remove <id>` | Deletes a task by its ID. | `python tracker.py remove 2` |
+| `help/-h/--help` | Shows the help message for the CLI tool. | `python tracker.py help` |
 
 ### Examples
 
 ```bash
 # Add a new task
-task add "Review pull request #123"
+python tracker.py add "Review pull request #123"
 
 # Add another task
-task add "Schedule team meeting for next week"
+python tracker.py add "Schedule team meeting for next week"
 
 # List all current tasks
-task list
+python tracker.py list
+
+# Filter tasks by status
+python tracker.py list todo
 
 # Mark the first task as done (assuming it has ID 1)
-task done 1
+python tracker.py done 1
 
-# View the updated list
-task list
-
-# See a summary report
-task report
+# List tasks by status
+python tracker.py list todo
 
 # Delete a task by ID (assuming it has ID 2)
-task delete 2
-
-# Clear all tasks
-task clear
+python tracker.py delete 2
 ```
