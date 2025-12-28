@@ -79,7 +79,7 @@ docs/_build/
 .pybuilder/
 target/
 
-.tasks.json
+tasks.json
 
 # IPython
 profile_default/
