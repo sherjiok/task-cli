@@ -58,9 +58,9 @@ python tracker.py -h
 | Command | Description | Example Usage |
 |---------|-------------|---------------|
 | `add <description>` | Adds a new task. | `python tracker.py add "Buy groceries"` |
-| `update <id> <new_description>` | Update task description | `python tracker.py update 1 "Refactor JSON storage" |
+| `update <id> <new_description>` | Update task description | `python tracker.py update 1 "Refactor JSON storage"` |
 | `list` | Lists all tasks (todo, in-progress and done). | `python tracker.py list` |
-| `list <status>` | Lists tasks by status | `python tracker.py list in-progress |
+| `list <status>` | Lists tasks by status | `python tracker.py list in-progress` |
 | `mark <status> <id>` | Change a task status using its ID. | `python tracker.py mark done 1` |
 | `remove <id>` | Deletes a task by its ID. | `python tracker.py remove 2` |
 | `help/-h/--help` | Shows the help message for the CLI tool. | `python tracker.py help` |
@@ -89,3 +89,5 @@ python tracker.py list todo
 # Delete a task by ID (assuming it has ID 2)
 python tracker.py delete 2
 ```
+##Project URL
+https://roadmap.sh/projects/task-tracker
