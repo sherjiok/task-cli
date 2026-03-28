@@ -1,12 +1,12 @@
-## ⚡ task-cli
+## task-cli
 
 **A simple and efficient command-line interface for managing your daily tasks.**
 
-## 📖 Overview
+## Overview
 
 `task-cli` is a lightweight command-line utility designed to help you stay organized and productive. It provides a straightforward way to add, list, complete, and delete your tasks directly from your terminal, storing them locally for persistence. Perfect for developers, system administrators, or anyone who prefers a minimalist approach to task management.
 
-## ✨ Features
+## Features
 
 -   **Add New Tasks**: Quickly add tasks with descriptive text.
 -   **Update Tasks**: Update a task description using its ID.
@@ -16,7 +16,7 @@
 -   **Delete Specific Tasks**: Remove individual tasks that are no longer needed.
 -   **Local Persistence**: Your tasks are saved locally and persist across sessions.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 -   **Python 3.x**: Ensure you have Python 3 installed on your system.
